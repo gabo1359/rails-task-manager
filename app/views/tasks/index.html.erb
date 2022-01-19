@@ -1,0 +1,9 @@
+<h1>Our first view</h1>
+<div>Titles</div>
+<ol>
+<% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+</ol>
+
+<%= link_to "Add new task", new_path %>
